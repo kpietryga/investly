@@ -11,7 +11,7 @@ export default class BugetSumary {
      */
     createSumary() {
         // Create the main summary container
-        basicComponents.createAndAppendDiv("summary", "summary container", "mainArea");
+        basicComponents.createAndAppendDiv("summary", "summary container-fluid", "mainArea");
 
         // Create the title of the summary
         basicComponents.createH2("Podsumowanie Budżetu", "summary", "summary-title mt-4");
