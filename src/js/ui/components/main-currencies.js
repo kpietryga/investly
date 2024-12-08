@@ -9,7 +9,7 @@ export const fillCurrencyData = async () => {
 
     // Fetch the current and previous currency data for the specified currency table ("A").
     const res = await fetchTableData("A");
-    const resLast = await fetchTableDataLast("A", "2");
+    const resLast = await fetchTableDataLast("A", 2);
 
     // Get the DOM elements that represent the currency cards to display the data
     const firstCard = document.getElementById("curr-card-firts")
@@ -17,11 +17,11 @@ export const fillCurrencyData = async () => {
     const thirdCard = document.getElementById("curr-card-thirds")
     const fourthCard = document.getElementById("curr-card-fourth")
 
-    // Calculate the differences in exchange rates for the currencies
-    const funt = (res.data[0].rates[10].mid - resLast.data[0].rates[10].mid).toFixed(2)
-    const euro = (res.data[0].rates[7].mid - resLast.data[0].rates[7].mid).toFixed(2)
-    const frank = (res.data[0].rates[9].mid - resLast.data[0].rates[9].mid).toFixed(2)
-    const dolar = (res.data[0].rates[1].mid - resLast.data[0].rates[1].mid).toFixed(2)
+
+    const funt = (Math.abs(res.data[0].rates[10].mid - resLast.data[0].rates[10].mid) < 0.01 ? 0 : (res.data[0].rates[10].mid - resLast.data[0].rates[10].mid)).toFixed(2)
+    const euro = (Math.abs(res.data[0].rates[7].mid - resLast.data[0].rates[7].mid) < 0.01 ? 0 : (res.data[0].rates[7].mid - resLast.data[0].rates[7].mid)).toFixed(2)
+    const frank = (Math.abs(res.data[0].rates[9].mid - resLast.data[0].rates[9].mid) < 0.01 ? 0 : (res.data[0].rates[9].mid - resLast.data[0].rates[9].mid)).toFixed(2)
+    const dolar = (Math.abs(res.data[0].rates[1].mid - resLast.data[0].rates[1].mid) < 0.01 ? 0 : (res.data[0].rates[1].mid - resLast.data[0].rates[1].mid)).toFixed(2)
 
     /**
      * Determines the trend (increase, decrease, or no change) based on the currency difference.
@@ -34,7 +34,7 @@ export const fillCurrencyData = async () => {
         } else if (curr < 0){
             return curr + ' <i class="fa-solid fa-arrow-trend-down text-danger"></i>'
         }else {
-            return curr + ' -'
+            return curr + ' <i class="fa-solid fa-circle"></i>'
         }
     }
 

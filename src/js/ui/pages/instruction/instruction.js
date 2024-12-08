@@ -20,7 +20,7 @@ export const initInstruction = () => {
     // Add detailed instructions about using the app for budgeting, investing, and reports
     div.innerHTML = `
     <h2>1. Wprowadzenie</h2>
-    <p>Aplikacja webowa służy do zarządzania osobistym budżetem oraz inwestycjami w różne aktywa, takie jak złoto, metale, obligacje i inne. Umożliwia monitorowanie dochodów, wydatków, oszczędności oraz planowanie inwestycji w oparciu o aktualny stan finansów.</p>
+    <p>Aplikacja webowa służy do zarządzania osobistym budżetem oraz inwestycjami w różne aktywa, takie jak złoto, fundusze inwestycyjne, obligacje i inne. Umożliwia monitorowanie dochodów, wydatków, oszczędności oraz planowanie inwestycji w oparciu o aktualny stan finansów.</p>
 
     <h2>2. Ustawienia budżetu</h2>
     <ol>
