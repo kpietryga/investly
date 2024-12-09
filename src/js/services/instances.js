@@ -49,5 +49,6 @@ const archiveStorage = new StorageService("archives-investments");
 /** Planning service for managing investments, metals, currencies, and archives. */
 export const planingService = new PlaningService(investStorage, metalsStorage, currencyStorage, archiveStorage);
 
+//export const budgetSumary = new BugetSumary();
 /** Data and time service **/
 export const clock = new Time

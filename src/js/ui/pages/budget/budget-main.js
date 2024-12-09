@@ -71,7 +71,10 @@ export const initBudget = () => {
     const clearDataBtn = document.getElementById("clearData");
     clearDataBtn.addEventListener("click", e => {
         bm.clearBudget();
-        bm.initIncomes();
-        bm.initOutgoings();
+        document.getElementById("incomes-list").innerHTML = "";
+        document.getElementById("outgoings-list").innerHTML = "";
+        document.getElementById("summary").innerHTML = "";
+        sumary.createSumary();
+        console.log("dziala")
     });
 };
