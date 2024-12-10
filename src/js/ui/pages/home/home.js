@@ -22,7 +22,7 @@ export const createHome = async () => {
     // Get balance from localStorage and display a warning if balance is less than or equal to 0
     const balance = localStorage.getItem("balance");
     if (balance <= 0) {
-        basicComponents.createP(`Kwota w twoim budżecie wynosi ${balance} dodaj przechody aby móc zainwetować. To powiadomienie zniknie po okresleniu bużetu.`, "alert alert-success m-0 mb-4 alert-dismissible fade show", "mainArea");
+        basicComponents.createP(`Kwota w twoim budżecie wynosi 0 zł dodaj przechody aby móc zainwetować. To powiadomienie zniknie po okresleniu bużetu.`, "alert alert-success m-0 mb-4 alert-dismissible fade show", "mainArea");
     }
 
     // Create header for the gold price section
@@ -41,8 +41,8 @@ export const createHome = async () => {
     basicComponents.createDoubleContainer("chart");
 
     // Create chart containers for currency statistics
-    basicComponents.createCardChart("chart-left", "Waluty - ostatnie 250 notowań", "myAreaChart", "bar-chart");
-    basicComponents.createCardChart("chart-right", "Waluty - Ostatnie 90 dni", "myBarChart", "bar-chart");
+    basicComponents.createCardChart("chart-left", "Waluty - ostatni rok", "myAreaChart", "bar-chart");
+    basicComponents.createCardChart("chart-right", "Waluty - ostatnie 90 notowań", "myBarChart", "bar-chart");
 
     // Generate and display charts for the currency statistics
     createCurrencyChart(250, "myAreaChart");

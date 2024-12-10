@@ -30,8 +30,8 @@ export const initCurrencies = () => {
      */
     basicComponents.createActualCurrencyDataContainer();
     basicComponents.createDoubleContainer("chart");
-    basicComponents.createCardChart("chart-left", "Waluty - Ostatnie 250 dni", "myAreaChart", "bar-chart");
-    basicComponents.createCardChart("chart-right", "Waluty - Ostatnie 90 dni", "myBarChart", "bar-chart");
+    basicComponents.createCardChart("chart-left", "Waluty - Ostatni rok", "myAreaChart", "bar-chart");
+    basicComponents.createCardChart("chart-right", "Waluty - Ostatnie 90 notowań", "myBarChart", "bar-chart");
 
     /**
      * Generates currency charts for the last 250 days and 90 days.
