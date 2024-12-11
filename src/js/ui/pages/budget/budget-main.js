@@ -1,7 +1,7 @@
 import BudgetManager from "./budget-manager";
-import BugetSumary from "./buget-sumary";
+//import BugetSumary from "./buget-sumary";
 import { createBudgetForms } from "./budget-forms";
-import { basicComponents, formComponents } from "../../../services/instances";
+import {basicComponents, budgetSumary, formComponents} from "../../../services/instances";
 
 /**
  * Initializes the budget management module.
@@ -35,8 +35,7 @@ export const initBudget = () => {
     createBudgetForms();
 
     // Initialize budget summary
-    const sumary = new BugetSumary();
-    sumary.createSumary();
+    budgetSumary.createSumary()
 
     // Initialize budget manager and its functionality
     const bm = new BudgetManager();
@@ -74,7 +73,8 @@ export const initBudget = () => {
         document.getElementById("incomes-list").innerHTML = "";
         document.getElementById("outgoings-list").innerHTML = "";
         document.getElementById("summary").innerHTML = "";
-        sumary.createSumary();
+        //sumary.createSumary();
+        budgetSumary.createSumary()
         console.log("dziala")
     });
 };

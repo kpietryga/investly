@@ -1,9 +1,8 @@
 import createCurrencyChart from "../../components/chart";
 import { fillCurrencyData } from "../../components/main-currencies";
 import BudgetManager from "../budget/budget-manager";
-import BugetSumary from "../budget/buget-sumary";
 import { createCurrentGoldPrice } from "../../components/current-gold";
-import { basicComponents } from "../../../services/instances";
+import {basicComponents, budgetSumary} from "../../../services/instances";
 
 /**
  * Initializes the home page for the budget and currency management dashboard,
@@ -13,6 +12,7 @@ import { basicComponents } from "../../../services/instances";
  * @async
  * @function createHome
  */
+
 export const createHome = async () => {
 
     // Create header for the central management area
@@ -32,11 +32,13 @@ export const createHome = async () => {
 
     // Create header for the currency section
     basicComponents.createH2("Najważniejsze waluty", "mainArea", "text");
+
     // Create container for currency data
     basicComponents.createActualCurrencyDataContainer();
 
     // Create header for the statistics section
     basicComponents.createH2("Statystyki", "mainArea", "text");
+
     // Create a container for charts
     basicComponents.createDoubleContainer("chart");
 
@@ -52,8 +54,7 @@ export const createHome = async () => {
     fillCurrencyData().catch(error => console.log(error));
 
     // Create a budget summary section
-    const sumary = new BugetSumary();
-    sumary.createSumary();
+    budgetSumary.createSumary();
 
     // Create a budget manager instance and count budget items and balance
     const budget = new BudgetManager();

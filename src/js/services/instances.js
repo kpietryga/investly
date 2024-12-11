@@ -12,6 +12,7 @@ import BasicComponents from "../ui/components/basic-components";
 import CurrCalculatorService from "./curr-calculator-service";
 import PlaningService from "./planing-service";
 import Time from "../ui/components/time";
+import BugetSumary from "../ui/pages/budget/buget-sumary";
 
 /** UI component for handling forms. */
 export const formComponents = new Form();
@@ -49,6 +50,8 @@ const archiveStorage = new StorageService("archives-investments");
 /** Planning service for managing investments, metals, currencies, and archives. */
 export const planingService = new PlaningService(investStorage, metalsStorage, currencyStorage, archiveStorage);
 
-//export const budgetSumary = new BugetSumary();
+/** Planning service for sumary budget. */
+export const budgetSumary = new BugetSumary();
+
 /** Data and time service **/
 export const clock = new Time
