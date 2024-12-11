@@ -134,14 +134,14 @@ export default class BudgetManager {
      */
     countBalance() {
         this.balance.innerText = budgetService.getBalace();
-        return budgetService.getBalace();
+        return Number(budgetService.getBalace());
     }
 
     /**
      * Saves the current budget balance to local storage.
      */
     aceptBudget() {
-        localStorage.setItem("saves", this.countBalance().toString());
+        localStorage.setItem("saves", this.countBalance().toFixed(2));
     }
 
     /**

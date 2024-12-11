@@ -101,10 +101,10 @@ export default class PlaningService {
         investment.currentPrice = currentPrice;
         this.archiveStorage.save(investment);
 
-        const updatedSaves = `${Number.parseFloat(localStorage.getItem("saves")) +
+        const updatedSaves = Number.parseFloat(localStorage.getItem("saves")) +
         Number.parseFloat(investment.amount) +
-        Number.parseFloat(profit)}`;
-        localStorage.setItem("saves", updatedSaves);
+        Number.parseFloat(profit);
+        localStorage.setItem("saves", updatedSaves.toFixed(2));
 
         const updatedProfit = `${Number.parseFloat(localStorage.getItem("current-profit") || "0") + Number.parseFloat(profit)}`;
         localStorage.setItem("current-profit", updatedProfit);

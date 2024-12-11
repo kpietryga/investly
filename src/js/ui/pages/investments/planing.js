@@ -308,7 +308,7 @@ export const initPlaning = async () => {
             return acc + Number.parseFloat(current.amount)
         }, 0)
 
-        localStorage.setItem("invested-amout", `${sumInvest}`)
+        localStorage.setItem("invested-amout", sumInvest.toFixed(2))
         document.getElementById("invested-amout").innerText = localStorage.getItem("invested-amout") || "0"
     }
 
@@ -330,7 +330,7 @@ export const initPlaning = async () => {
             return acc + Number.parseFloat(current.amount)
         }, 0)
 
-        localStorage.setItem("invested-amout", `${sumInvest}`)
+        localStorage.setItem("invested-amout", sumInvest.toFixed(2))
         document.getElementById("invested-amout").innerText = localStorage.getItem("invested-amout") || "0"
     }
 
@@ -357,7 +357,7 @@ export const initPlaning = async () => {
         } else if (saves - inputElement.value < 0) {
             alert("Wartoś podanej inwestycji przekracza oszczednosci")
         } else {
-            localStorage.setItem("saves", `${saves - inputElement.value}`)
+            localStorage.setItem("saves", (saves - inputElement.value).toFixed(2))
             const activeRadio = document.querySelector('input[name="RadioInvestGroup"]:checked');
             let value;
 
