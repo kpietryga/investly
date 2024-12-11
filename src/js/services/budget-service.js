@@ -103,7 +103,7 @@ export class BudgetService {
      * Clears all budget data from localStorage.
      */
     clearData() {
-        localStorage.setItem("budget-incomes", "[]");
-        localStorage.setItem("budget-outgoings", "[]");
+        this.incomesStorage.clear();
+        this.outgoingsStorage.clear();
     }
 }
