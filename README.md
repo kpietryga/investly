@@ -1,5 +1,6 @@
-
 # Investly
+
+Explore the live demo: [Investly Demo](https://investly.pietryga.com.pl/)
 
 **Investly** is a modern web application designed to help manage personal budgets and investments. It enables users to monitor their finances and plan investments in various assets, such as gold, metals, and currencies.
 
@@ -13,6 +14,7 @@
 ## Technologies
 
 The project is built using the following technologies:
+
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: [Specify the backend technology if applicable]
 - **Others**: [List additional libraries or frameworks]
@@ -36,9 +38,12 @@ The project is built using the following technologies:
    npm start
    ```
 
+Alternatively, you can explore the live demo of the application here: [Investly Demo](https://investly.pietryga.com.pl/).
+
 ## Contributing
 
 If you'd like to contribute to the project:
+
 1. Fork the repository.
 2. Create a new branch:
    ```bash
