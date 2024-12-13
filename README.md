@@ -16,8 +16,7 @@ Explore the live demo: [Investly Demo](https://investly.pietryga.com.pl/)
 The project is built using the following technologies:
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: [Specify the backend technology if applicable]
-- **Others**: [List additional libraries or frameworks]
+- **Others**: [Bootstrap, APEXCHARTS.JS]
 
 ## Installation
 
