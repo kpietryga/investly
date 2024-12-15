@@ -12,7 +12,7 @@ export const initInstruction = () => {
     basicComponents.createH1("Istrukcja", "mainArea");
     basicComponents.addIconToHeading("fas fa-book color-2")
 
-    basicComponents.createP("W razie problemów z korzystaniem z aplikacji, skontaktuj się z działem wsparcia technicznego poprzez zakładkę „Pomoc” lub wysyłając wiadomość na adres support@krzysztof-pietryga.com.pl.", "alert alert-success m-0 mb-4 alert-dismissible fade show", "mainArea")
+    basicComponents.createP("W razie problemów z korzystaniem z aplikacji, skontaktuj się z działem wsparcia technicznego wysyłając wiadomość na adres support@pietryga.com.pl.", "alert alert-success m-0 mb-4 alert-dismissible fade show", "mainArea")
 
     // Create a container div for the instructions content
     const div = basicComponents.createDiv("ins-cointainer", "ins-cointainer")
